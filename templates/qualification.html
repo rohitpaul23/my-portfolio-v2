@@ -10,20 +10,13 @@
   <body>
     {% include 'header.html' %}
     <div class="container">
-      <div class='text-center fs-1 mt-3'>About Me</div>
-      <div class='row'>
-        <div class='col-8 text-center fs-5' style='margin: 10px'>
-          {% include 'mysummary.html' %}  
-        </div>
-        <div class='col'>
-          <img class='img-fluid img-thumbnail' src="https://demowebsiterepo.rohitpaul8.repl.co/static/rohit.jpg" alt="Something Not Right">
-          <div class="skills-container text-center">
-            <h3 class='fs-4 mt-4'>Skills</h3>
-            {% for skill in skills %}
-              {% include 'skill.html' %}
-            {% endfor %}
-          </div>  
-        </div>
+      <div>
+        <h1>Qualification</h1>  
+      </div>
+      <div>
+        My certificates
+      </div>
+      
     </div>
     {% include 'footer.html' %}
   </body>

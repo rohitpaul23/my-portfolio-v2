@@ -32,8 +32,21 @@ SKILLS = [
 
 
 @app.route('/')
-def hello_world():
+def home():
   return render_template('home.html', skills=SKILLS)
+
+@app.route("/contact")
+def contact():
+  return render_template('contact.html')
+
+@app.route("/project")
+def project():
+  return render_template('project.html')
+
+@app.route("/qualification")
+def qualification():
+  return render_template('qualification.html')
+
 
 @app.route("/api/skills")
 def list_skills():
