@@ -9,16 +9,20 @@
   </head>
   <body>
     <div class="container">
-      <div class='text-center fs-1'>About Me</div>
-    <div class='body' style='position: relative;'>
-      <img class='img-fluid opacity-25' style='position:absolute' src="https://demowebsiterepo.rohitpaul8.repl.co/static/minions.jpg" alt="Something Not Right" height=250px>
-      <div class='text-center fs-5 lh-base' style='margin: 10px'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus diam dui, hendrerit a aliquet eget, tristique ut dui. Maecenas ultrices urna est, quis scelerisque urna efficitur ac. In laoreet tortor neque, a ultrices sem varius sit amet. Nunc quis nulla mollis, finibus magna eget, consequat quam. Nam consequat felis condimentum mauris tincidunt hendrerit. Quisque lobortis nisi vel ipsum auctor, in accumsan dolor viverra. Nulla facilisi. Quisque a urna tellus. Sed eu risus vel arcu dapibus maximus. Quisque auctor purus a velit sollicitudin, non tempus magna vulputate.
-
-Proin dapibus, enim nec porta semper, lacus nunc maximus ex, et tincidunt lacus nibh a turpis. Curabitur eu lacinia lacus. Vestibulum bibendum mi eget augue ultrices fermentum. Nullam eu rhoncus massa. Nam sagittis nisl erat, vitae mattis dolor tincidunt vitae. Donec vel fringilla elit. Praesent feugiat ex dolor, a faucibus tellus vulputate venenatis. Proin gravida nisl nunc, in pharetra erat eleifend non. Fusce feugiat.  
-      </div>
-    </div>
-    <button type="button" class='btn btn-outline-primary position-absolute bottom-0 start-50 translate-middle' style='align-items:center;'>Contact</input>  
+      <div class='text-center fs-1 mt-3'>About Me</div>
+      <div class='row'>
+        <div class='col-8 text-center fs-5' style='margin: 10px'>
+          {% include 'mysummary.html' %}  
+        </div>
+        <div class='col'>
+          <img class='img-fluid img-thumbnail' src="https://demowebsiterepo.rohitpaul8.repl.co/static/rohit.jpg" alt="Something Not Right">
+          <div class="skills-container text-center">
+            <h3 class='fs-4 mt-4'>Skills</h3>
+            {% for skill in skills %}
+              {% include 'skill.html' %}
+            {% endfor %}
+          </div>  
+        </div>
     </div>
     
   </body>
