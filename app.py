@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from database import load_skills_from_db
+from database import load_skills_from_db, load_projects_from_db, get_domain_projects
 
 app = Flask(__name__)
   
@@ -14,7 +14,8 @@ def contact():
 
 @app.route("/project")
 def project():
-  return render_template('project.html')
+  projects = get_domain_projects()
+  return render_template('project.html', projects=projects)
 
 @app.route("/qualification")
 def qualification():
