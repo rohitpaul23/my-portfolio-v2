@@ -1,0 +1,28 @@
+<div class="accordion-item">
+         
+          <h2 class="accordion-header" id='{{"heading"+project["id"]|string}}'>
+            <button class='accordion-button{{collapse}}' type="button" data-bs-toggle="collapse" data-bs-target='{{"#collapse"+project["id"]|string}}' aria-expanded={{expanded}} aria-controls='{{"collapse"+project["id"]|string}}'>
+            {{project['name']}}
+            </button>
+          </h2>
+          <div id='{{"collapse"+project["id"]|string}}' class="accordion-collapse collapse{{show}}" aria-labelledby='{{"heading"+project["id"]|string}}' data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <strong>Description :</strong>
+                  {{project['description']}}
+                </li>
+                <li class="list-group-item">
+                  <strong>GitHub URL :</strong>
+                  <a href='{{project["code"]}}' target="_blank">
+                    {{project['code']}}
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <strong>Created At :</strong>
+                  {{project['created']}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
