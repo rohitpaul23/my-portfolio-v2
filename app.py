@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from database import load_skills_from_db, load_projects_from_db, get_domain_projects
+from database import load_skills_from_db, get_domain_projects
 
 app = Flask(__name__)
   
